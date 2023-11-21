@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> enjoy! </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* div {
+            position: relative;
+            width: 800px;
+            height: 450px;
+            background-color: #A4D43D;
+            border-radius: 30px;
+        } */
+
+        div#wrap {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: #A4D43D;
+            /* border-radius: 30px; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            position: relative;
+            width: 1100px;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        section.bg_bottom {
+            position: relative;
+            width: 100%;
+            height: 160px;
+            background: #537310;
+            border-radius: 50%;
+            top: 400px;
+            /* transform: translateY(200%); */
+        }
+
+        div#wrap p.deco {
+            position: absolute;
+            z-index: 0;
+            top: -50px;
+            animation: deco 5s ease-in-out infinite;
+        }
+
+        @keyframes deco {
+            0% {
+                transform: scale(0);
+                /* 0%에서는 원의 크기를 0으로 설정하여 숨김 */
+                opacity: 0;
+                /* 투명도를 0으로 설정하여 숨김 */
+            }
+
+            30% {
+                transform: scale(1);
+                /* 50%에서는 원의 크기를 1.5배로 키움 */
+                opacity: 1;
+                /* 투명도를 1로 설정하여 나타남 */
+            }
+
+            50% {
+                transform: scale(1);
+                /* 50%에서는 원의 크기를 1.5배로 키움 */
+                opacity: 0.3;
+                /* 투명도를 1로 설정하여 나타남 */
+            }
+
+            70% {
+                transform: scale(1);
+                /* 50%에서는 원의 크기를 1.5배로 키움 */
+                opacity: 0;
+                /* 투명도를 1로 설정하여 나타남 */
+            }
+
+            100% {
+                transform: scale(0.5);
+                /* 100%에서는 원의 크기를 원래 크기로 돌림 */
+                opacity: 0;
+                /* 투명도를 0으로 설정하여 숨김 */
+            }
+        }
+
+        div#wrap p.text {
+            position: absolute;
+            color: #FFF;
+            justify-content: center;
+            text-align: center;
+            font-family: Lemon;
+            font-size: 90px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            letter-spacing: -3.2px;
+            padding-top: 20px;
+            left: 50%;
+            top: 15%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            animation: fadein 5s infinite;
+        }
+
+        @keyframes fadein {
+
+            0% {
+                opacity: 0;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+
+        p.person1 {
+            position: absolute;
+            left: 160px;
+            bottom: 150px;
+            z-index: 1;
+        }
+
+        p.person2 {
+            position: absolute;
+            left: 310px;
+            bottom: 80px;
+            z-index: 3;
+        }
+
+        p.person3 {
+            position: absolute;
+            left: 460px;
+            bottom: 130px;
+            z-index: 2;
+            animation: slidein 4s infinite;
+        }
+
+        @keyframes slidein {
+            from {
+                transform: translateX(-280%);
+            }
+
+            to {
+                transform: translateX(0%);
+            }
+        }
+
+        p.person4 {
+            position: absolute;
+            right: 310px;
+            bottom: 100px;
+            z-index: 2;
+        }
+
+        p.person5 {
+            position: absolute;
+            right: 165px;
+            bottom: 140px;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div#wrap>.person$*5 -->
+    <div id="wrap">
+        <div>
+            <p class="text">enjoy!<br>your Life!</p>
+            <p class="person1"><img src="./images/person1.png"></p>
+            <p class="person2"><img src="./images/person2.png"></p>
+            <p class="person3"><img src="./images/person3.png"></p>
+            <p class="person4"><img src="./images/person4.png"></p>
+            <p class="person5"><img src="./images/person5.png"></p>
+            <p class="deco"><img src="./images/deco.png"></p>
+            <section class="bg_bottom"></section>
+        </div>
+    </div>
+</body>
+
+</html>
